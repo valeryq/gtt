@@ -3,4 +3,4 @@ import { render } from 'react-dom';
 
 const element = document.getElementById('app');
 
-export default (component) => render(React.createElement(component), element);
+export default (component) => render(React.createElement(() => component), element);

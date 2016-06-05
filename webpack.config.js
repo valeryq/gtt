@@ -7,12 +7,12 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 module.exports = {
   context: __dirname + '/src/scripts',
   entry: {
-    login: './entrypoints/login'
+    app: './entrypoints/app'
   },
   output: {
     path: __dirname + '/dist',
     filename: "[name].js",
-    publicPath: '/'
+    publicPath: '/dist/'
   },
 
   resolve: {

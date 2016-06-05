@@ -1,0 +1,36 @@
+@require 'mixins'
+
+// Hello login component
+.hello-login
+  height: 100%;
+  display: flex;
+  .layout-positioner
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    h1
+      margin: 0;
+      font-size: 100px;
+      font-weight: 700;
+      @media (max-width: 485px)
+        font-size: 65px;
+    p
+      font-size: 16px;
+    a
+      display: inline-block;
+      padding: 10px 0;
+      border-radius(3px);
+      border: none;
+      cursor: pointer;
+      background-color: #252525;
+      width: 103px;
+      height: 40px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      &:hover
+        background-color: #666666;
