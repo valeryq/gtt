@@ -12,5 +12,5 @@ GTT
 ```javascript
     npm i
     gulp
-    npm run server // Site will available on http://localhost:8080/
+    npm run server // Site will available on http://localhost:8085/
 ```
