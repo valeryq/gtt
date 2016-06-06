@@ -1,7 +1,7 @@
 import Validator from 'validatorjs';
 
 const constraints = {
-  login: ['required', 'min:3', 'regex:/^[a-z0-9\ \\-\']+$/'],
+  login: ['required', 'min:3', 'regex:/^[a-z0-9 \\-\']+$/'],
   password: ['required', 'min:3'],
 };
 

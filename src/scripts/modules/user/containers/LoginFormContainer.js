@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import LoginForm from '../components/forms/LoginForm';
 import { LOGIN_FORM } from '../../../redux/helpers/form-helper';
@@ -6,7 +5,7 @@ import { loginAction, loadUser } from '../../../redux/actions/thunk/userAction';
 import { push } from 'react-router-redux';
 
 const mapStateToProps = (state) => ({
-  errors: state.forms[LOGIN_FORM].errors
+  errors: state.forms[LOGIN_FORM].errors,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -18,7 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
     if (isSuccess) {
       dispatch(push('/welcome'));
     }
-  }
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

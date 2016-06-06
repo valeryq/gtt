@@ -20,7 +20,9 @@ function LoginModal() {
         <LoginFormContainer />
       </main>
       <footer className="modal__footer">
-        <h3 className="modal__footer-title">Dont have an account yet? <a className="modal__footer-title-link" href="#">Sign up</a></h3>
+        <h3 className="modal__footer-title">
+          Dont have an account yet? <a className="modal__footer-title-link" href="#">Sign up</a>
+        </h3>
       </footer>
     </section>
   );

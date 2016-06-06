@@ -40,19 +40,19 @@ class Input extends Component {
    */
   render() {
     let errorClassName = null;
-    const {id, type, name, prefixClassName, placeholder, label, value} = this.props;
+    const { id, type, name, prefixClassName, placeholder, label, value } = this.props;
     const inputProps = { id, type, name, placeholder, value, onChange: this.handleChange };
     const errors = this.props.errors.join(', ');
 
     if (errors) {
-      errorClassName = prefixClassName + '-input-' + type + '-invalid';
+      errorClassName = `${prefixClassName}-input-${type}-invalid`;
     }
 
     return (
-      <section className={ prefixClassName + '-field-' + type }>
-        { errors ? <span className={ prefixClassName + '-field-error-text' }>{ errors }</span> : null }
-        <input className={ prefixClassName + '-input-' + type + ' ' + errorClassName } { ...inputProps } />
-        <label htmlFor={ id }>{ label }</label>
+      <section className={`${prefixClassName}-field-${type}`}>
+        {errors ? <span className={`${prefixClassName}-field-error-text`}>{errors}</span> : null}
+        <input className={`${prefixClassName}-input-${type} ${errorClassName}`} { ...inputProps } />
+        <label htmlFor={id}>{label}</label>
       </section>
     );
   }
@@ -60,6 +60,7 @@ class Input extends Component {
 
 Input.propTypes = {
   id: PropTypes.string,
+  name: PropTypes.string,
   type: PropTypes.string.isRequired,
   prefixClassName: PropTypes.string,
   placeholder: PropTypes.string,

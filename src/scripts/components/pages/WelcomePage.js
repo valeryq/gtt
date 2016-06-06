@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import HelloLoginContainer from '../../modules/user/containers/HelloLoginContainer';
 
 function WelcomePage() {

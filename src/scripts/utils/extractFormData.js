@@ -7,7 +7,7 @@
  */
 export default function extractFormData(fields) {
   const values = {};
-  for (const key in this.refs) {
+  for (const key of fields) {
     if (this.refs.hasOwnProperty(key)) {
       values[key] = this.refs[key].state.value;
     }

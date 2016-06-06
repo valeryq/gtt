@@ -12,20 +12,18 @@ const userService = new UserService();
  *
  * @returns {Function}
  */
-export const loginAction = (data) => {
-  return (dispatch) => {
-    const validator = loginValidator(data);
+export const loginAction = data => dispatch => {
+  const validator = loginValidator(data);
 
-    if (validator.passes()) {
-      dispatch(successLogin(data));
+  if (validator.passes()) {
+    dispatch(successLogin(data));
 
-      userService.login(data);
+    userService.login(data);
 
-      dispatch(push('/welcome'));
-    } else {
-      dispatch(errorLogin(validator.errors.all()));
-    }
-  };
+    dispatch(push('/welcome'));
+  } else {
+    dispatch(errorLogin(validator.errors.all()));
+  }
 };
 
 /**
@@ -33,11 +31,9 @@ export const loginAction = (data) => {
  *
  * @returns {Function}
  */
-export const logoutAction = () => {
-  return (dispatch) => {
-    userService.logout();
-    dispatch(push('/'));
-  };
+export const logoutAction = () => dispatch => {
+  userService.logout();
+  dispatch(push('/'));
 };
 
 
@@ -46,17 +42,15 @@ export const logoutAction = () => {
  *
  * @returns {Function}
  */
-export const loadUser = () => {
-  return (dispatch) => {
-    const user = userService.user();
+export const loadUser = () => dispatch => {
+  const user = userService.user();
 
-    if (user) {
-      dispatch(successLoadUser(user));
-      return true;
-    }
+  if (user) {
+    dispatch(successLoadUser(user));
+    return true;
+  }
 
-    dispatch(errorLoadUser());
+  dispatch(errorLoadUser());
 
-    return false;
-  };
+  return false;
 };

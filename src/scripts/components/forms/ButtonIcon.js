@@ -4,15 +4,14 @@ import React, { PropTypes } from 'react';
  * Button with icon component
  *
  * @param value
- * @param icon
  * @param className
  *
  * @returns {XML}
  * @constructor
  */
-function ButtonIcon({ value, icon, className = '' }) {
+function ButtonIcon({ value, className = '' }) {
   return (
-    <a href="#" className={ className }>{ value }</a>
+    <a href="#" className={className}>{value}</a>
   );
 }
 

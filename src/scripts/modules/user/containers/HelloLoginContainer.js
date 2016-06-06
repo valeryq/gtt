@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import HelloLogin from '../components/HelloLogin';
 import { loadUser, logoutAction } from '../../../redux/actions/thunk/userAction';

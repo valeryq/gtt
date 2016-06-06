@@ -8,7 +8,7 @@ const initialState = {
   errors: {
     login: [],
     password: [],
-  }
+  },
 };
 
 export default function loginFormReducer(state = initialState, action) {

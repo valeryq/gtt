@@ -58,7 +58,7 @@ class LoginForm extends Component {
       label: 'Login',
       ref: 'login',
       errors: errors.login,
-      prefixClassName: formName
+      prefixClassName: formName,
     };
 
     const passwordField = {
@@ -67,7 +67,7 @@ class LoginForm extends Component {
       label: 'Password',
       ref: 'password',
       errors: errors.password,
-      prefixClassName: formName
+      prefixClassName: formName,
     };
 
     const rememberField = {
@@ -75,17 +75,17 @@ class LoginForm extends Component {
       type: 'checkbox',
       label: 'Remember me',
       ref: 'rememberme',
-      prefixClassName: formName
+      prefixClassName: formName,
     };
 
     return (
-      <section className={'form form--half-width ' + formName}>
+      <section className={`form form--half-width ${formName}`}>
         <form onSubmit={this.submitForm}>
           <Input { ...loginField } />
           <Input { ...passwordField } />
           <Input { ...rememberField } />
-          <button className={formName + '-submit'} type="submit">Log in</button>
-          <a className={formName + '-help'} href="#">Need help logging in?</a>
+          <button className={`${formName}-submit`} type="submit">Log in</button>
+          <a className={`${formName}-help`} href="#">Need help logging in?</a>
         </form>
       </section>
     );
